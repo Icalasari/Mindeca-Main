@@ -13,21 +13,7 @@ mindeca.mpies = {
 	--Winter
 }
 
---Terms
-
---trunk = log
---wood = planks, wood
---doord = door
---fruit = fruit
---leaf = leaves
---leafa = alternate leaves
---stair = stairs
---slab = slabs
---branchd = branch
---twigd = twig
---chartwig = charred twig
-
-mindeca.treepart = {
+mindeca.pieparts = {
 	--Spring
 	--Summer
 	peach = {
@@ -37,12 +23,12 @@ mindeca.treepart = {
 	--Winter
 }
 
-for i in ipairs(mindeca.trees) do
+for i in ipairs(mindeca.mpies) do
 	local mpie = mindeca.mpies[i][1]
 	local mhun = mindeca.mpies[i][2]
 	local mpieseat = 1
 minetest.register_node("mindeca:item_cook_pie_"..mpie..mpieseat, {
-	description = mindeca.baking[mpies].mpiedesc,
+	description = mindeca.baking[pieparts].mpiedesc,
 	drawtype = "mesh",
 	collision_box = {
 		type = "fixed",
